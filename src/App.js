@@ -1,9 +1,10 @@
 import React from 'react';
+import Container from './Components/Container';
 
 function App() {
   return (
       <React.Fragment>
-        hello
+        <Container/>
       </React.Fragment>
   );
 }
