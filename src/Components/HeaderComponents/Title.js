@@ -1,3 +1,5 @@
+import classes from './Title.module.css'
+
 const Title = (props) => {
 
 
@@ -5,11 +7,14 @@ const Title = (props) => {
         props.setNavVisibility(!props.navState);
     }
     return (
-        <div>
+        <div className={classes['header-container']}>
+            {/*<HeaderTitle/>*/}
+            {/*    <HeaderButtons/>*/}
             <button onClick={handleNavClick}>
                 make nav visible
             </button>
         </div>
+
     );
 };
 
