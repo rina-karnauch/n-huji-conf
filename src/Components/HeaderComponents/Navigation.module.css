@@ -1,0 +1,24 @@
+.nav{
+    background-color:#f5f5f5;
+    width:100vw;
+}
+
+.row{
+    border-bottom:0.5px solid #ececec;
+    padding-bottom:20px;
+    padding-top:20px;
+    padding-left:40px;
+    color:black;
+    font-size:30px;
+    display:flex;
+    align-items: center;
+}
+
+.row:hover{
+    background-color: #efefef5;
+    border-left:5px solid #b189cb;
+}
+
+.chosen{
+    border-left:5px solid #89b985;
+}
