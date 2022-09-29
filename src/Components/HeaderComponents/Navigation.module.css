@@ -16,9 +16,9 @@
 
 .row:hover{
     background-color: #efefef5;
-    border-left:5px solid #b189cb;
+    border-left:8px solid #b189cb;
 }
 
 .chosen{
-    border-left:5px solid #89b985;
+    border-left:6px solid #89b985;
 }
