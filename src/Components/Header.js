@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <React.Fragment>
             <Title navState={isNavVisible} setNavVisibility={setNavVisibility}/>
-            {isNavVisible && <Navigation setChosen={setChosen}/>}
+            <Navigation setChosen={setChosen} isNavVisable={isNavVisible}/>
         </React.Fragment>
     );
 };

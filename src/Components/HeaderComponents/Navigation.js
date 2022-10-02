@@ -8,7 +8,7 @@ import {HiPhone} from 'react-icons/hi';
 import {MdInsertPhoto} from 'react-icons/md';
 import {ThemeContext} from "../ThemeContext";
 
-const Navigation = () => {
+const Navigation = (props) => {
 
     // theme
     const theme = useContext(ThemeContext);
@@ -55,7 +55,9 @@ const Navigation = () => {
     }
     return (
         <div className={
-            `${classes['nav']} ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
+            `${classes['nav']} 
+            ${props.isNavVisable ? classes['visible-nav'] : classes['invisible-nav']}
+            ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
         }>
             <NavigationComp list={items}/>
         </div>
