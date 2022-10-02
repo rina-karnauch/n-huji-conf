@@ -1,14 +1,20 @@
 import * as React from 'react';
 import classes from './Navigation.module.css';
-import {useState} from "react";
+import {useContext, useState} from "react";
 import Typography from '@mui/material/Typography';
 import classnames from 'classnames';
 import {AiTwotoneFileText} from 'react-icons/ai';
 import {HiPhone} from 'react-icons/hi';
 import {MdInsertPhoto} from 'react-icons/md';
+import {ThemeContext} from "../ThemeContext";
 
-const Navigation = (props) => {
+const Navigation = () => {
 
+    // theme
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+
+    // component
     let items = [
         {
             itemName: 'dashboard',
@@ -19,7 +25,7 @@ const Navigation = (props) => {
             element: <HiPhone name="hotlines"/>
         },
         {
-            itemName:'meme tutorial',
+            itemName: 'meme tutorial',
             element: <MdInsertPhoto name="m-tutorial"/>
         }
     ];
@@ -31,18 +37,26 @@ const Navigation = (props) => {
             <React.Fragment>
                 {props.list.map((item, index) =>
                     <div
-                        className={classnames(classes.row, {[classes.chosen]: isChosen === index})}
+                        className={
+                            classnames(
+                                classes.row,
+                                {[classes.chosen]: isChosen === index},
+                                {[classes['row-light']]: darkMode === false},
+                                {[classes['row-dark']]: darkMode === true},
+                            )}
                         key={index}
                         onClick={() => setChosen(index)}>
                         {item.element}
-                        <Typography variant="h4" sx={{marginLeft:"10px", }}>
+                        <Typography variant="h4" sx={{marginLeft: "10px",}}>
                             {item.itemName}
                         </Typography>
                     </div>)}
             </React.Fragment>);
     }
     return (
-        <div className={classes['nav']}>
+        <div className={
+            `${classes['nav']} ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
+        }>
             <NavigationComp list={items}/>
         </div>
     );

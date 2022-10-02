@@ -1,7 +1,9 @@
+import classes from './Body.module.css';
+
 const Body = () => {
 
     return(
-        <div>
+        <div className={classes['body-container']}>
             body
         </div>
     );

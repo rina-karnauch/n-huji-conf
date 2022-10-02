@@ -1,17 +1,31 @@
 import classes from './Title.module.css'
 import {FaAngleDoubleDown, FaAngleDoubleUp, FaFacebook} from 'react-icons/fa';
-import {useState} from "react";
+import {useContext, useState} from "react";
 import Typography from "@mui/material/Typography";
-import {GiHeraldicSun, GiNightSky} from "react-icons/gi";
+import {GiNightSky} from "react-icons/gi";
+import {ThemeContext} from "../ThemeContext";
 
 const Title = (props) => {
 
-    const [isDown, setIsDown] = useState(true);
+    // theme
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
 
+    const handleThemeClick = () => {
+        if (darkMode) {
+            theme.dispatch({type: "LIGHT-MODE"});
+        } else {
+            theme.dispatch({type: "DARK-MODE"})
+        }
+    }
+
+    // component itself
+    const [isDown, setIsDown] = useState(true);
     const handleNavClick = () => {
         props.setNavVisibility(!props.navState);
         setIsDown(!isDown);
     }
+
     return (
         <div className={classes['header-container']}>
             {/*<HeaderTitle/>*/}
@@ -21,10 +35,10 @@ const Title = (props) => {
             </button>
             <Typography id={classes['title']} variant="h3">Huji Confessions</Typography>
             <div id={classes['header-buttons-container']}>
-                <button className={classes['header-buttons']}>
-                        <GiNightSky id={classes['button-mode']}
-                                    className={classes['button-center']}
-                        />
+                <button className={classes['header-buttons']} onClick={handleThemeClick}>
+                    <GiNightSky id={classes['button-mode']}
+                                className={classes['button-center']}
+                    />
                 </button>
                 <button className={classes['header-buttons']}>
                     <FaFacebook

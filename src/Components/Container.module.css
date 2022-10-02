@@ -1,5 +1,14 @@
 .container{
+    min-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
+}
+
+.container-light{
+    background-color: #e2e2ef;
+}
+
+.container-dark{
+    background-color: #515256;
 }
