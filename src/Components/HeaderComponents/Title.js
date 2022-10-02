@@ -2,7 +2,7 @@ import classes from './Title.module.css'
 import {FaAngleDoubleDown, FaAngleDoubleUp, FaFacebook} from 'react-icons/fa';
 import {useContext, useState} from "react";
 import Typography from "@mui/material/Typography";
-import {GiNightSky} from "react-icons/gi";
+import {GiNightSky, GiSecretBook} from "react-icons/gi";
 import {ThemeContext} from "../ThemeContext";
 
 const Title = (props) => {
@@ -27,13 +27,29 @@ const Title = (props) => {
     }
 
     return (
-        <div className={classes['header-container']}>
+        <div className={
+            // `${classes['nav']} ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
+            `${classes['header-container']} 
+            ${darkMode ? classes['header-container-dark'] : classes['header-container-light']}`
+        }>
             {/*<HeaderTitle/>*/}
             {/*    <HeaderButtons/>*/}
-            <button id={classes['dropdown-button']} onClick={handleNavClick}>
+            <button
+                className={
+                    `${classes['dropdown-button']} 
+                    ${darkMode ? classes['dropdown-button-dark'] : classes['dropdown-button-light']}`
+                }
+                onClick={handleNavClick}>
                 {isDown ? <FaAngleDoubleDown size={30}/> : <FaAngleDoubleUp size={30}/>}
             </button>
-            <Typography id={classes['title']} variant="h3">Huji Confessions</Typography>
+            <GiSecretBook
+                className={` ${classes['book-icon']}
+                    ${darkMode? classes['book-icon-dark'] : classes['book-icon-light']}
+                    `}
+            />
+            <Typography id={classes['title']} variant="h3">
+                Huji Confessions
+            </Typography>
             <div id={classes['header-buttons-container']}>
                 <button className={classes['header-buttons']} onClick={handleThemeClick}>
                     <GiNightSky id={classes['button-mode']}

@@ -7,7 +7,8 @@
 }
 
 .nav-dark{
-    background-color: #465460;
+    background-color: #0d1116;
+    border-left:2px solid rgba(56, 72, 89, 0.56);
 }
 
 .row{
@@ -20,20 +21,29 @@
 }
 
 .row:hover{
-    background-color: #efefef5;
-    border-left:8px solid #b189cb;
+    z-index:2;
 }
 
 .row-light{
     border-bottom:0.5px solid #ececec;
-    color:black;
+    color:#61727f;
+}
+.row-light:hover{
+    background-color: #eeeeee;
+    border-left:8px solid #3799c1;
 }
 
 .row-dark{
-    border-bottom:0.5px solid #505050;
-    color: #ececec;
+    border-bottom:0.5px solid #0c0e11;
+    color: #c9d1d9;
+
+}
+.row-dark:hover{
+    background-color:#11171d;
+    border-left:8px solid #58ad40;
 }
 
 .chosen{
-    border-left:6px solid #89b985;
+    z-index:2;
+    border-left:6px solid rgba(56, 72, 89, 0.56);
 }

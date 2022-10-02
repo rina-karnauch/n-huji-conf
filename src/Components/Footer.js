@@ -18,8 +18,8 @@ const Footer = () => {
                 className={classes['texts']}>
                 <div
                     className={
-                        `${classes['huji-text']} 
-                        ${darkMode ? classes['huji-text-dark'] : classes['huji-text-light']}`
+                        `${classes['huji-text']}
+                        ${darkMode? classes['huji-text-dark'] : classes['huji-text-light']}`
                     }>
                     We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with
                     <br></br>The
@@ -29,16 +29,14 @@ const Footer = () => {
                 </div>
                 <div
                     className={
-                        `${classes['admin-text']} 
-                        ${darkMode ? classes['admin-text-dark'] : classes['admin-text-light']}`
+                        classes['admin-text']
                     }>
                     Confessions are moderated by anonymous admins. Site was created by <a
                     href="https://www.linkedin.com/in/rina-karnauch-055826203/">Rina Karnauch</a> 🧚🏻.
                 </div>
                 <div
                     className={
-                        `${classes['rights-text']} 
-                        ${darkMode ? classes['rights-text-dark'] : classes['rights-text-light']}`
+                        classes['rights-text']
                     }>
                     All Rights Reserved © 2022
                 </div>

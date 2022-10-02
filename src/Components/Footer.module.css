@@ -2,18 +2,21 @@
 .footer-container {
     height: 200px;
     width: 100vw;
-    margin-top: auto;
+    margin-top:auto;
+    margin-bottom: 50px;
     padding:10px;
 }
 
 .footer-container-light{
-    background-color: #f5f5f5;
-    border-top: 0.5px solid #ececec;
+    background-color: #f6f6f6;
+    border-top: 0.5px solid #dbdbdb;
+    border-bottom: 0.5px solid #dbdbdb;
 }
 
 .footer-container-dark{
-    background-color: #4f565e;
-    border-top: 0.5px solid #6f7780;
+    background-color: #161b22;
+    border-top: 0.5px solid #1a1f25;
+    border-bottom: 0.5px solid #1a1f25;
 }
 
 .texts{
@@ -26,39 +29,18 @@
 }
 
 .huji-text {
+    color:#757b82;
     font-size: 28px;
 }
 
-.huji-text-light{
-    color: #8c919a;
-}
-
-.huji-text-dark{
-    color: #b8bcc4;
-}
-
 .admin-text {
+    color:#616871;
     font-size: 26px;
 }
 
-.admin-text-light{
-    color: #576170;
-}
-
-.admin-text-dark{
-    color: #96a1b0;
-}
-
-.rights-text {
+.rights-text{
+    color:#757b82;
     font-size: 30px;
-}
-
-.rights-text-dark{
-    color: #a2abb6;
-}
-
-.rights-text-light{
-    color: #d4dbe3;
 }
 
 .huji-text a {
@@ -66,17 +48,17 @@
 }
 
 .huji-text-light a {
-    color: #86b1d7;
+    color: #3799c1;
     font-weight: 700;
 }
 
 .huji-text-dark a {
-    color: #bdd8ef;
+    color: #58ad40;
     font-weight: 700;
 }
 
 .admin-text a {
-    color: #ba96da;
+    color: #a369cb;
     font-weight: 700;
 }
 

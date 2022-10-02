@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .header-container {
-    background-color: rgb(61, 63, 72);
     width: 100vw;
     height: 110px;
     align-items: center;
@@ -11,25 +10,33 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-#dropdown-button {
+.header-container-light{
+    background-color:#32353d;
+}
+
+.header-container-dark{
+    background-color:#242f38;
+}
+
+.dropdown-button {
     display: flex;
     align-items: center;
 
     border-radius: 50%;
-    color: #b7b7b7;
-    background-color: rgb(76, 78, 87);
+    background-color: rgba(141, 165, 183, 0.25);
+    color: #cbcbcb;
     border: none;
     padding: 10px;
     margin-left: 25px;
 
-    -webkit-transition: color 0.5s ease-in-out;
-    -moz-transition: color 0.5s ease-in-out;
-    -o-transition: color 0.5s ease-in-out;
-    transition: color 0.5s ease-in-out;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 
-#dropdown-button:hover {
-    color: #e1e1e1;
+.dropdown-button:hover{
+    background-color: rgba(141, 165, 183, 0.4);
 }
 
 #title {
@@ -60,14 +67,13 @@
     color: white;
     background-color:transparent;
     border:none;
-}
 
-#button-mode #button-facebook{
 }
 
 #button-mode:hover {
     border-radius: 50%;
     background-color: #b189cb;
+
 }
 
 #button-facebook:hover {
@@ -79,4 +85,21 @@
     vertical-align: middle;
     align-items: center;
     font-size:30px;
+}
+
+.book-icon{
+    border-radius: 50%;
+    padding:10px;
+    font-size:25px;
+    color:white;
+}
+
+.book-icon-dark{
+    border:#319a36;
+    background-color:#58ad40;
+}
+
+.book-icon-light{
+    border:#2e83a5;
+    background-color:#3aaecb;
 }
