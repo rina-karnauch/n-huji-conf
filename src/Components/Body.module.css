@@ -1,4 +1,29 @@
-.body-container{
-    width:100vw;
-    padding:20px;
+/*.body-container {*/
+/*    width: 100vw;*/
+/*    padding: 20px;*/
+/*}*/
+
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding:50px;
+
+    width:90vw;
+    margin:50px;
+
+    z-index:0;
+}
+.content-light{
+    background-color: #f6f6f6;
+    border: 0.5px solid #dbdbdb;
+}
+
+.content-dark{
+    background-color: #161b22;
+    border: 0.5px solid #1a1f25;
+}
+
+.form-container{
 }

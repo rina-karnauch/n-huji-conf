@@ -54,11 +54,12 @@ const Navigation = (props) => {
             </React.Fragment>);
     }
     return (
-        <div className={
-            `${classes['nav']} 
-            ${props.isNavVisable ? classes['visible-nav'] : classes['invisible-nav']}
+        <div
+            className={
+            `${classes['nav']}
             ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
-        }>
+        }
+        >
             <NavigationComp list={items}/>
         </div>
     );

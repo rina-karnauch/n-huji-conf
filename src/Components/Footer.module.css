@@ -2,9 +2,11 @@
 .footer-container {
     height: 200px;
     width: 100vw;
-    margin-top:auto;
-    margin-bottom: 50px;
     padding:10px;
+    z-index:2;
+
+    margin-bottom:50px;
+    margin-top:auto;
 }
 
 .footer-container-light{
