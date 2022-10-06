@@ -10,10 +10,11 @@
     align-content: center;
     padding:50px;
 
-    width:90vw;
-    margin:50px;
-
+    width:93vw;
+    height:100vh;
     z-index:0;
+    border-radius: 15px;
+
 }
 .content-light{
     background-color: #f6f6f6;
@@ -22,8 +23,15 @@
 
 .content-dark{
     background-color: #161b22;
-    border: 0.5px solid #1a1f25;
+    border: 0.5px solid rgba(76, 99, 124, 0.16);
 }
 
-.form-container{
+.form-button-group{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin:50px;
+    font-size:40px;
+    gap:20px;
+    align-items:center;
 }

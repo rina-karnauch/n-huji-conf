@@ -1,12 +1,14 @@
+import React from 'react';
 import classes from './Body.module.css';
 import {useContext} from "react";
 import {ThemeContext} from "./ThemeContext";
 import TableTitle from "./BodyComponents/TableTitle";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
-import {TextField} from "@mui/material";
+import {Button, TextField} from "@mui/material";
 import {
     styled
 } from '@mui/material/styles';
+import SendIcon from '@mui/icons-material/Send';
 
 const Body = () => {
 
@@ -15,71 +17,57 @@ const Body = () => {
     const darkMode = theme.state.darkMode;
 
     // textfield styling
-    const CssTextFieldDark = styled(TextField)({
+    const StyledTextField = styled(TextField)({
         '& label': {
-            color: '#63788f'
+            color: `${darkMode ? "#c7dbee" : "#858585"}`,
         },
         '& label.Mui-focused': {
-            color: '#63788f'
+            color: `${darkMode ? "#c7dbee" : "#858585"}`
         },
         '& label.Mui-disabled': {
-            color: '#63788f'
+            color: `${darkMode ? "#c7dbee" : "#858585"}`
         },
         '& .MuiInputBase-root': {
-            color: '#63788f',
-            borderRadius: '0',
-            padding: '10px'
+            color: `${darkMode ? "#c7dbee" : "#858585"}`,
+            borderRadius: '15px',
+            padding: '10px',
+        },
+        '& .MuiInput-underline:before' : {
+            borderBottomColor: `${darkMode ? "red" : "green"}`,
         },
         '& .MuiInput-underline:after': {
-            borderBottomColor: '#4c637c'
+            borderBottomColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`,
         },
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                borderColor: '#4c637c'
-            },
-            '&:hover fieldset': {
-                borderColor: '#4c637c'
-            },
-            '&.Mui-focused fieldset': {
-                borderColor: '#4c637c'
-            },
-            '&.Mui-disabled fieldset': {
-                borderColor: '#4c637c'
-            }
-        },
+        // '& .MuiOutlinedInput-root': {
+        //     '& fieldset': {
+        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`,
+        //     },
+        //     '&:hover fieldset': {
+        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
+        //     },
+        //     '&.Mui-focused fieldset': {
+        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
+        //     },
+        //     '&.Mui-disabled fieldset': {
+        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
+        //     }
+        // },
     });
 
-    const CssTextFieldLight = styled(TextField)({
-        '& label': {
-            color: "#858585"
+    const StyledButton = styled(Button)(() => ({
+        color: `${darkMode ? '#d5e7d5' : '#effbff'}`,
+        marginTop: "5px",
+        boxShadow: "none",
+        borderRadius: "60px",
+        fontSize: '28px',
+        padding: '20px 40px 20px 40px',
+        border: `1px solid ${darkMode ? '#4db85b' : '#60b7d9'}`,
+        backgroundColor: `${darkMode ? '#58ad40' : '#3aaecb'}`,
+        '&:hover': {
+            backgroundColor: `${darkMode ? '#5fb646' : '#42b8d5'}`,
+            boxShadow: "none",
         },
-        '& label.Mui-focused': {
-            color: "#858585"
-        },
-        '& label.Mui-disabled': {
-            color: "#858585"
-        },
-        '& .MuiInputBase-root': {
-            color: "#858585"
-        },
-        '& .MuiInput-underline:after': {
-            borderBottomColor: "#bbbbbb"
-        },
-        '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-                borderColor: "#bbbbbb"
-            },
-            '&:hover fieldset': {
-                borderColor: "#bbbbbb"
-            },
-            '&.Mui-focused fieldset': {
-                borderColor: "#bbbbbb"
-            },
-            '&.Mui-disabled fieldset': {
-                borderColor: "#bbbbbb"
-            }
-        },
-    });
+    }));
 
     return (
         <div
@@ -93,31 +81,7 @@ const Body = () => {
                 icon={<EmailTwoToneIcon/>}
             />
             <form className={classes['form-container']}>
-                {darkMode ? <CssTextFieldDark
-
-                    fullWidth
-                    multiline
-                    id="fullWidth"
-                    size="normal"
-                    rows={6}
-                    sx={{
-                        width: '90vw',
-                    }}
-                    label="write whats on your mind"
-                    variant="outlined"
-                    dir="rtl"
-                    inputProps={{
-                        style: {
-                            fontSize: "1.8rem",
-                            padding:'10px'
-                        }
-                    }}
-                    InputLabelProps={{
-                        style: {
-                            fontSize: "1.5rem",
-                        }
-                    }}
-                /> : <CssTextFieldLight
+                <StyledTextField
                     required
                     fullWidth multiline
                     id="fullWidth"
@@ -127,21 +91,28 @@ const Body = () => {
                         width: '90vw',
                     }}
                     label="whats on your heart"
-                    variant="outlined"
-                    name="entry.638196057"
+                    variant="filled"
                     dir="rtl"
                     inputProps={{
                         style: {
-                            fontSize: "1.8rem",
-                            padding:'10px'
+                            lineHeight: '2rem',
+                            fontSize: "2rem",
+                            padding: '10px'
                         }
                     }}
                     InputLabelProps={{
                         style: {
-                            fontSize: "1.5rem",
+                            fontSize: "2rem",
                         }
                     }}
-                />}
+                />
+                <div className={classes['form-button-group']}>
+                    <div>number</div>
+                    <StyledButton
+                        endIcon={<SendIcon/>}>
+                        submit
+                    </StyledButton>
+                </div>
             </form>
         </div>
     );

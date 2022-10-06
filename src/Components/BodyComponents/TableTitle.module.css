@@ -5,6 +5,8 @@
     align-items:center;
     align-content: center;
     text-align:center;
+    margin-top:160px;
+    margin-bottom:10px;
 }
 
 .title-container-light {
@@ -12,9 +14,9 @@
 }
 
 .title-container-dark {
-    color:#4c637c;
+    color:#c7dbee;
 }
 
 .title {
-    font-size: 50px;
+    font-size: 60px;
 }
