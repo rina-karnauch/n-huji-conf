@@ -23,6 +23,10 @@
     align-items: center;
 }
 
+.row:last-child{
+    border:0;
+}
+
 .row-light {
     color: #61727f;
     border-bottom: 0.5px solid #ececec;
