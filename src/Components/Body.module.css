@@ -9,10 +9,9 @@
     align-items: center;
     align-content: center;
     padding:50px;
-
+    margin-top:50px;
     width:93vw;
     z-index:0;
-    border-radius: 15px;
 
 }
 .content-light{
@@ -21,8 +20,8 @@
 }
 
 .content-dark{
-    background-color: #161b22;
-    border: 0.5px solid rgba(76, 99, 124, 0.16);
+    background-color: #0f141a;
+    border: 0.5px solid rgba(76, 99, 124, 0.41);
 }
 
 .form-button-group{

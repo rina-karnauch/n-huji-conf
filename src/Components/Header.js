@@ -9,14 +9,10 @@ const Header = () => {
     const [chosenTab, setChosen] = useState();
 
     return (
-        <React.Fragment>
-            <Accordion expanded={isNavVisible} onChange={() => {
-                setNavVisibility(!isNavVisible)
-            }}>
-                <Title navState={isNavVisible} setNavVisibility={setNavVisibility}/>
-                <Navigation setChosen={setChosen}/>
-            </Accordion>
-        </React.Fragment>
+        <Accordion expanded={isNavVisible}>
+            <Title navState={isNavVisible} setNavVisibility={setNavVisibility}/>
+            <Navigation setChosen={setChosen}/>
+        </Accordion>
     );
 };
 

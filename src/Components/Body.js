@@ -42,7 +42,7 @@ const Body = () => {
     });
 
     const StyledButton = styled(Button)(() => ({
-        color: `${darkMode ? '#d5e7d5' : '#effbff'}`,
+        color: `${darkMode ? '#f6fff6' : '#effbff'}`,
         marginTop: "5px",
         boxShadow: "none",
         borderRadius: "60px",
