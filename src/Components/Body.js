@@ -20,25 +20,29 @@ const Body = () => {
     const StyledTextField = styled(TextField)({
         '& label': {
             color: `${darkMode ? "#c7dbee" : "#858585"}`,
+            margin: '10px 20px',
         },
         '& label.Mui-focused': {
-            color: `${darkMode ? "#c7dbee" : "#858585"}`
+            color: `${darkMode ? "#c7dbee" : "#858585"}`,
         },
         '& label.Mui-disabled': {
             color: `${darkMode ? "#c7dbee" : "#858585"}`
         },
         '& .MuiInputBase-root': {
+            backgroundColor: `${darkMode ? "rgba(199,219,238,0.12)" : "rgba(215,215,215,0.37)"}`,
             color: `${darkMode ? "#c7dbee" : "#858585"}`,
-            borderRadius: '15px',
-            padding: '10px',
+            borderRadius: '26px 0px 0px 0px',
+            padding: '15px',
         },
-        '& .MuiInput-underline:before' : {
-            borderBottomColor: `${darkMode ? "red" : "green"}`,
+        '& .MuiInputBase-root::before': {
+            borderBottom: `1x solid ${darkMode ? "#c7dbee" : "#efefef"}`,
         },
-        '& .MuiInput-underline:after': {
-            borderBottomColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`,
+        '& .MuiInputBase-root::after': {
+            borderBottom: `5px solid ${darkMode ? '#4db85b' : '#60b7d9'}`,
         },
-        // '& .MuiOutlinedInput-root': {
+        '& MuiFilledInput-root::before':{
+            borderBottom:'1px solid red'
+        }
     });
 
     const StyledButton = styled(Button)(() => ({
@@ -84,14 +88,15 @@ const Body = () => {
                         style: {
                             lineHeight: '2rem',
                             fontSize: "2rem",
-                            padding: '10px'
-                        }
+                            padding: '10px',
+                        },
                     }}
                     InputLabelProps={{
                         style: {
                             fontSize: "2rem",
                         }
                     }}
+
                 />
                 <div className={classes['form-button-group']}>
                     <div>number</div>
