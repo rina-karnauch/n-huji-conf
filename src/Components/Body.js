@@ -39,19 +39,6 @@ const Body = () => {
             borderBottomColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`,
         },
         // '& .MuiOutlinedInput-root': {
-        //     '& fieldset': {
-        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`,
-        //     },
-        //     '&:hover fieldset': {
-        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
-        //     },
-        //     '&.Mui-focused fieldset': {
-        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
-        //     },
-        //     '&.Mui-disabled fieldset': {
-        //         borderColor: `${darkMode ? "#4c637c" : "#bbbbbb"}`
-        //     }
-        // },
     });
 
     const StyledButton = styled(Button)(() => ({
