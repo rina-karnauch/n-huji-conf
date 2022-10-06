@@ -18,9 +18,9 @@
 }
 
 .footer-container-dark{
-    background-color: #161b22;
-    border-top: 0.5px solid #1a1f25;
-    border-bottom: 0.5px solid #1a1f25;
+    background-color: #0f141a;
+    border-top: 0.5px solid rgba(53, 76, 100, 0.41);
+    border-bottom: 0.5px solid rgba(53, 76, 100, 0.41);
 }
 
 .texts{
