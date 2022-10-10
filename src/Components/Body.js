@@ -9,6 +9,7 @@ import {
     styled
 } from '@mui/material/styles';
 import SendIcon from '@mui/icons-material/Send';
+import NumberTextField from "./BodyComponents/NumberTextField";
 
 const Body = () => {
 
@@ -99,7 +100,7 @@ const Body = () => {
 
                 />
                 <div className={classes['form-button-group']}>
-                    <div>number</div>
+                    <NumberTextField/>
                     <StyledButton
                         endIcon={<SendIcon/>}>
                         submit
