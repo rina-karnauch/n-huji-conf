@@ -1,15 +1,10 @@
-/*.body-container {*/
-/*    width: 100vw;*/
-/*    padding: 20px;*/
-/*}*/
-
 .content{
     display:flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     margin-top:60px;
-    width:93vw;
+    width:93%;
     z-index:0;
 
 }
@@ -30,4 +25,8 @@
     margin:50px;
     gap:20px;
     align-items:center;
+}
+
+.form-container{
+    width:95%;
 }

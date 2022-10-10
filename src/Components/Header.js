@@ -9,12 +9,15 @@ const Header = () => {
     const [chosenTab, setChosen] = useState();
 
     return (
-        <Accordion
-            expanded={isNavVisible}
-        >
-            <Title navState={isNavVisible} setNavVisibility={setNavVisibility}/>
-            <Navigation setChosen={setChosen}/>
-        </Accordion>
+        <div style={{width: '100%'}}>
+            <Accordion
+                expanded={isNavVisible}
+            >
+                <Title navState={isNavVisible} setNavVisibility={setNavVisibility}/>
+                <Navigation setChosen={setChosen}/>
+            </Accordion>
+        </div>
+
     );
 };
 

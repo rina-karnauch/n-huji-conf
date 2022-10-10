@@ -34,20 +34,20 @@ const Title = (props) => {
         }>
             {/*<HeaderTitle/>*/}
             {/*    <HeaderButtons/>*/}
-            <button
-                className={
-                    `${classes['dropdown-button']} 
+            <div className={classes['left-side-buttons']}>
+                <button
+                    className={
+                        `${classes['dropdown-button']} 
                     ${darkMode ? classes['dropdown-button-dark'] : classes['dropdown-button-light']}`
-                }
-                onClick={handleNavClick}>
-                {isDown ? <FaAngleDoubleDown size={15}/> : <FaAngleDoubleUp size={15}/>}
-            </button>
-            <GiSecretBook
-                className={` ${classes['book-icon']}
-                    ${darkMode? classes['book-icon-dark'] : classes['book-icon-light']}
-                    `}
-            />
-            <Typography id={classes['title']} fontSize={30}>
+                    }
+                    onClick={handleNavClick}>
+                    {isDown ? <FaAngleDoubleDown/> : <FaAngleDoubleUp/>}
+                </button>
+                <GiSecretBook className={` ${classes['book-icon']}
+                    ${darkMode ? classes['book-icon-dark'] : classes['book-icon-light']}
+                    `}/>
+            </div>
+            <Typography id={classes['title']}>
                 Huji Confessions
             </Typography>
             <div id={classes['header-buttons-container']}>

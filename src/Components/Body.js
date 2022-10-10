@@ -68,16 +68,13 @@ const Body = () => {
                 title="Send a Confession"
                 icon={<EmailTwoToneIcon/>}
             />
-            <form>
+            <form className={`${classes['form-container']}`}>
                 <StyledTextField
                     required
                     fullWidth multiline
                     id="fullWidth"
                     size="medium"
                     rows={4}
-                    sx={{
-                        width: '90vw',
-                    }}
                     label="whats on your heart"
                     variant="filled"
                     dir="rtl"
