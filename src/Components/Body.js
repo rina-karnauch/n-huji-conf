@@ -83,16 +83,9 @@ const Body = () => {
                     dir="rtl"
                     inputProps={{
                         style: {
-                            fontSize: "1rem",
                             padding: '10px',
                         },
                     }}
-                    InputLabelProps={{
-                        style: {
-                            fontSize: "1.3rem",
-                        }
-                    }}
-
                 />
                 <div className={classes['form-button-group']}>
                     <NumberTextField/>

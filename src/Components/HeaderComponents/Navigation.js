@@ -8,7 +8,7 @@ import {HiPhone} from 'react-icons/hi';
 import {MdInsertPhoto} from 'react-icons/md';
 import {ThemeContext} from "../ThemeContext";
 
-const Navigation = (props) => {
+const Navigation = () => {
 
     // theme
     const theme = useContext(ThemeContext);
@@ -30,7 +30,7 @@ const Navigation = (props) => {
         }
     ];
 
-    const [isChosen, setChosen] = useState(null);
+    const [isChosen, setChosen] = useState(0);
 
     const NavigationComp = (props) => {
         return (

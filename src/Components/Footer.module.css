@@ -1,11 +1,11 @@
 
 .footer-container {
-    height: 200px;
+    height: 100px;
     width: 100vw;
     padding:10px;
     z-index:2;
 
-    margin-bottom:100px;
+    margin-bottom:50px;
     position:fixed;
     bottom:0;
     margin-top:auto;
@@ -34,17 +34,17 @@
 
 .huji-text {
     color:#757b82;
-    font-size: 28px;
+    font-size: 16px;
 }
 
 .admin-text {
     color:#616871;
-    font-size: 26px;
+    font-size: 14px;
 }
 
 .rights-text{
     color:#757b82;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .huji-text a {
