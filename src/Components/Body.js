@@ -27,12 +27,12 @@ const Body = () => {
             color: `${darkMode ? "#c7dbee" : "#858585"}`,
         },
         '& label.Mui-disabled': {
-            color: `${darkMode ? "#c7dbee" : "#858585"}`
+            color: `${darkMode ? "#c7dbee" : "#858585"}`,
         },
         '& .MuiInputBase-root': {
             backgroundColor: `${darkMode ? "rgba(199,219,238,0.12)" : "rgba(215,215,215,0.37)"}`,
             color: `${darkMode ? "#c7dbee" : "#858585"}`,
-            borderRadius: '26px 0px 0px 0px',
+            borderRadius: '26px 26px 0px 0px',
             padding: '15px',
         },
         '& .MuiInputBase-root::before': {
@@ -41,18 +41,14 @@ const Body = () => {
         '& .MuiInputBase-root::after': {
             borderBottom: `5px solid ${darkMode ? '#4db85b' : '#60b7d9'}`,
         },
-        '& MuiFilledInput-root::before':{
-            borderBottom:'1px solid red'
-        }
     });
 
     const StyledButton = styled(Button)(() => ({
         color: `${darkMode ? '#f6fff6' : '#effbff'}`,
-        marginTop: "5px",
         boxShadow: "none",
         borderRadius: "60px",
-        fontSize: '28px',
-        padding: '20px 40px 20px 40px',
+        fontSize: '15px',
+        padding: '10px 20px 10px 20px',
         border: `1px solid ${darkMode ? '#4db85b' : '#60b7d9'}`,
         backgroundColor: `${darkMode ? '#58ad40' : '#3aaecb'}`,
         '&:hover': {
@@ -72,13 +68,13 @@ const Body = () => {
                 title="Send a Confession"
                 icon={<EmailTwoToneIcon/>}
             />
-            <form className={classes['form-container']}>
+            <form>
                 <StyledTextField
                     required
                     fullWidth multiline
                     id="fullWidth"
                     size="medium"
-                    rows={8}
+                    rows={4}
                     sx={{
                         width: '90vw',
                     }}
@@ -87,14 +83,13 @@ const Body = () => {
                     dir="rtl"
                     inputProps={{
                         style: {
-                            lineHeight: '2rem',
-                            fontSize: "2rem",
+                            fontSize: "1rem",
                             padding: '10px',
                         },
                     }}
                     InputLabelProps={{
                         style: {
-                            fontSize: "2rem",
+                            fontSize: "1.3rem",
                         }
                     }}
 
