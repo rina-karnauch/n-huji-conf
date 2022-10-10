@@ -40,14 +40,14 @@ const Title = (props) => {
                     ${darkMode ? classes['dropdown-button-dark'] : classes['dropdown-button-light']}`
                 }
                 onClick={handleNavClick}>
-                {isDown ? <FaAngleDoubleDown size={30}/> : <FaAngleDoubleUp size={30}/>}
+                {isDown ? <FaAngleDoubleDown size={15}/> : <FaAngleDoubleUp size={15}/>}
             </button>
             <GiSecretBook
                 className={` ${classes['book-icon']}
                     ${darkMode? classes['book-icon-dark'] : classes['book-icon-light']}
                     `}
             />
-            <Typography id={classes['title']} variant="h3">
+            <Typography id={classes['title']} fontSize={30}>
                 Huji Confessions
             </Typography>
             <div id={classes['header-buttons-container']}>
