@@ -15,17 +15,17 @@
 }
 
 .row {
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 40px;
-    font-size: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 20px;
     display: flex;
     align-items: center;
 }
 
-.row:last-child{
-    border:0;
-}
+/*.row:last-child{*/
+/*    border:0;*/
+/*}*/
 
 .row-light {
     color: #61727f;

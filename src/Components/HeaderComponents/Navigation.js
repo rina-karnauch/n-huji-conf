@@ -47,7 +47,10 @@ const Navigation = (props) => {
                         key={index}
                         onClick={() => setChosen(index)}>
                         {item.element}
-                        <Typography variant="h4" sx={{marginLeft: "10px",}}>
+                        <Typography fontSize={18}
+                                    sx={{
+                                        marginLeft: "15px",
+                                    }}>
                             {item.itemName}
                         </Typography>
                     </div>)}
@@ -56,9 +59,9 @@ const Navigation = (props) => {
     return (
         <div
             className={
-            `${classes['nav']}
+                `${classes['nav']}
             ${darkMode ? classes['nav-dark'] : classes['nav-light']}`
-        }
+            }
         >
             <NavigationComp list={items}/>
         </div>
