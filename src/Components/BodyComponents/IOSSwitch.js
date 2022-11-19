@@ -1,16 +1,16 @@
 import {styled} from "@mui/material/styles";
-import {Switch } from "@mui/material";
+import {Switch} from "@mui/material";
 import * as React from "react";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useEffect, useMemo, useState} from "react";
 import {ThemeContext} from "../ThemeContext";
 
 const StyledSwitch = styled((props) => {
-    const [isComment, setIsComment] = useState(false);
+
     return (
         <Switch focusVisibleClassName=".Mui-focusVisible"
                 disableRipple {...props}
-                checked={isComment}
-                onChange={e => setIsComment(e.target.checked)}
+                checked={props.isComment}
+                onChange={e => props.setIsComment(e.target.checked)}
                 clickedBG={props.clickedBG}
                 opacity={props.opacity}
                 BG={props.BG}
@@ -66,7 +66,7 @@ const StyledSwitch = styled((props) => {
     })
 });
 
-export default function IOSSwitch() {
+export default function IOSSwitch(props) {
 
     const cTheme = useContext(ThemeContext);
     const darkMode = cTheme.state.darkMode;
@@ -76,22 +76,21 @@ export default function IOSSwitch() {
     const [BG, setBG] = useState('#E9E9EA');
 
     useEffect(() => {
-        if(darkMode){
-            setClickedBG('#3aaecb');
+        if (darkMode) {
+            setClickedBG('#2ECA45');
             setOpacity(0.3);
             setBG('rgba(53, 76, 100, 0.41)');
-        }else{
-            setClickedBG('#2ECA45');
+        } else {
+            setClickedBG('#3aaecb');
             setOpacity(0.7);
             setBG('#E9E9EA');
         }
     }, [darkMode]);
 
-    return (
-        <StyledSwitch
-            clickedBG={clickedBG}
-            opacity={opacity}
-            BG={BG}/>
-    );
-
+    return (<StyledSwitch
+        isComment={props.isComment}
+        setIsComment={props.setIsComment}
+        clickedBG={clickedBG}
+        opacity={opacity}
+        BG={BG}/>)
 };

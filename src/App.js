@@ -1,9 +1,11 @@
 import React from 'react';
 import Container from './Components/Container';
-import Footer from "./Components/Footer";
 
 
 function App() {
+
+    console.log("here");
+
     return (
         <React.Fragment>
             <Container/>

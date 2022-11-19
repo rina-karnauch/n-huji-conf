@@ -12,7 +12,6 @@ import SendIcon from '@mui/icons-material/Send';
 import NumberTextField from "./BodyComponents/NumberTextField";
 
 const Body = () => {
-
     // theme
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
