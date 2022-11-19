@@ -1,0 +1,10 @@
+.comment-text{
+    align-items:center;
+    color: #475156;
+}
+
+.comment-number-container{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}

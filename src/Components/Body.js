@@ -48,7 +48,7 @@ const Body = () => {
         boxShadow: "none",
         borderRadius: "60px",
         fontSize: '15px',
-        padding: '10px 20px 10px 20px',
+        padding: '7px 15px 7px 15px',
         border: `1px solid ${darkMode ? '#4db85b' : '#60b7d9'}`,
         backgroundColor: `${darkMode ? '#58ad40' : '#3aaecb'}`,
         '&:hover': {

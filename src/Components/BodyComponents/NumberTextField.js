@@ -1,9 +1,9 @@
 import * as React from "react";
 import classes from './NumberTextField.module.css'
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import {ThemeContext} from "../ThemeContext";
-import {styled} from "@mui/material/styles";
-import {Switch} from "@mui/material";
+import { TextField} from "@mui/material";
+import IOSSwitch from "./IOSSwitch";
 
 const NumberTextField = (props) => {
 
@@ -11,63 +11,33 @@ const NumberTextField = (props) => {
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
 
-    // ios-switch
-    const IOSSwitch = styled((props) => (
-        <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-    ))(({ theme }) => ({
-        width: 42,
-        height: 26,
-        padding: 0,
-        '& .MuiSwitch-switchBase': {
-            padding: 0,
-            margin: 2,
-            transitionDuration: '300ms',
-            '&.Mui-checked': {
-                transform: 'translateX(16px)',
-                color: '#fff',
-                '& + .MuiSwitch-track': {
-                    backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
-                    opacity: 1,
-                    border: 0,
-                },
-                '&.Mui-disabled + .MuiSwitch-track': {
-                    opacity: 0.5,
-                },
-            },
-            '&.Mui-focusVisible .MuiSwitch-thumb': {
-                color: '#33cf4d',
-                border: '6px solid #fff',
-            },
-            '&.Mui-disabled .MuiSwitch-thumb': {
-                color:
-                    theme.palette.mode === 'light'
-                        ? theme.palette.grey[100]
-                        : theme.palette.grey[600],
-            },
-            '&.Mui-disabled + .MuiSwitch-track': {
-                opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
-            },
-        },
-        '& .MuiSwitch-thumb': {
-            boxSizing: 'border-box',
-            width: 22,
-            height: 22,
-        },
-        '& .MuiSwitch-track': {
-            borderRadius: 26 / 2,
-            backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
-            opacity: 1,
-            transition: theme.transitions.create(['background-color'], {
-                duration: 500,
-            }),
-        },
-    }));
+    const [isComment, setIsComment] = useState(false);
+    const [confessionNumber, setConfessionNumber] = useState('');
+
+
+
+    // change event and validate input
+    function onConfessionNumberChange(event) {
+        let value = event.currentTarget.value.replace(/\D/g, '');
+        if (isComment && confessionNumber !== value) {
+            setConfessionNumber(value);
+        }
+    }
 
     return (
         <div
-            // className={}
+            className={classes['comment-number-container']}
         >
+            <div className={classes['comment-text']}> comment?</div>
             <IOSSwitch/>
+            <TextField
+                disabled={!isComment}
+                label="* confession id"
+                variant="outlined"
+                value={confessionNumber}
+                required={isComment}
+                onChange={(event) => onConfessionNumberChange(event)}
+            />
         </div>
     );
 }
