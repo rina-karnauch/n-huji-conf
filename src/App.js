@@ -4,8 +4,6 @@ import Container from './Components/Container';
 
 function App() {
 
-    console.log("here");
-
     return (
         <React.Fragment>
             <Container/>
